@@ -34,7 +34,7 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/system/user/login", corsConfig());
+        source.registerCorsConfiguration("/**", corsConfig());
         return new CorsFilter(source);
     }
 

@@ -1,6 +1,7 @@
 package com.xjb.newcrowncommon.Util;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import java.util.Calendar;
@@ -27,10 +28,12 @@ public class JwtUtil {
     public static String getToken(Map<String,String> map){
         Calendar instance = Calendar.getInstance();
         //30分钟过期时间
-        instance.add(Calendar.SECOND,60*30);
+        instance.add(Calendar.SECOND,60*5);
         Map<String,Object> header = new HashMap<>();
-        map.forEach((k,v) -> JWT.create().withClaim(k,v));
-        return JWT.create()
+        JWTCreator.Builder builder = JWT.create();
+        map.forEach((k,v) -> builder.withClaim(k,v));
+
+        return builder
                 .withHeader(header)
                 .withExpiresAt(instance.getTime())
                 .sign(Algorithm.HMAC256(SIGN));
@@ -60,9 +63,12 @@ public class JwtUtil {
      * @param token token令牌
      * @return 用户名
      */
-    public static String getUserNameFromTokenStr(String token) throws Exception{
+    public static Map<String,String> getUserNameFromTokenStr(String token) throws Exception{
         DecodedJWT encoding = encoding(token);
-        return encoding.getClaim("userName").asString();
+        Map<String,String> map = new HashMap<>();
+        map.put("userName",encoding.getClaim("userName").asString());
+        map.put("id",encoding.getClaim("id").asString());
+        return map;
     }
 
 }

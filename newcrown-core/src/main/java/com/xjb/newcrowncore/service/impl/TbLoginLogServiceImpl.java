@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbLoginLog;
-import com.xjb.newcrowncore.mapper.TbLoginLogMapper;
-import com.xjb.newcrowncore.service.TbLoginLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbLoginLog;
+import com.xjb.newcrowncommon.model.TbLoginLog;
 import com.xjb.newcrowncore.mapper.TbLoginLogMapper;
 import com.xjb.newcrowncore.service.TbLoginLogService;
 import org.springframework.stereotype.Service;

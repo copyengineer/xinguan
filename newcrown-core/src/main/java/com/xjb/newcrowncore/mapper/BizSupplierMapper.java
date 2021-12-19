@@ -1,7 +1,7 @@
 package com.xjb.newcrowncore.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xjb.newcrowncore.bean.BizSupplier;
+import com.xjb.newcrowncommon.model.BizSupplier;
 import org.springframework.stereotype.Repository;
 
 /**

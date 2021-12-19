@@ -1,7 +1,7 @@
 package com.xjb.newcrowncore.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xjb.newcrowncore.bean.TbRoleMenu;
+import com.xjb.newcrowncommon.model.TbRoleMenu;
 import org.springframework.stereotype.Repository;
 
 /**

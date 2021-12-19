@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.BizProductCategory;
-import com.xjb.newcrowncore.mapper.BizProductCategoryMapper;
-import com.xjb.newcrowncore.service.BizProductCategoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.BizProductCategory;
+import com.xjb.newcrowncommon.model.BizProductCategory;
 import com.xjb.newcrowncore.mapper.BizProductCategoryMapper;
 import com.xjb.newcrowncore.service.BizProductCategoryService;
 import org.springframework.stereotype.Service;

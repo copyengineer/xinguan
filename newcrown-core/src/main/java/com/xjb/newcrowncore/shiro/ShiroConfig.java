@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
+import javax.servlet.Filter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,7 +44,6 @@ public class ShiroConfig {
         Map<String, String> filterRuleMap = new HashMap<>();
         //访问登录和注册不需要认证授权
         filterRuleMap.put("/system/user/login", "anon");
-        filterRuleMap.put("/system/user/test01", "anon");
         //开放API文档接口
         filterRuleMap.put("/swagger-ui.html", "anon");
         filterRuleMap.put("/webjars/**","anon");
@@ -53,10 +53,10 @@ public class ShiroConfig {
         //sql监控
         filterRuleMap.put("/druid/**","anon");
         //所有请求经过我自己的过滤器
-        /*Map<String, Filter> filterMap = new HashMap<>(1);
-        filterMap.put("jwt",jwtFilter);
-        factoryBean.setFilters(filterMap);*/
-        filterRuleMap.put("/**", "authc");
+        Map<String, Filter> filterMap = new HashMap<>(1);
+        filterMap.put("jwt",new JwtFilter());
+        factoryBean.setFilters(filterMap);
+        filterRuleMap.put("/**", "jwt");
         //设置过滤器链
         factoryBean.setFilterChainDefinitionMap(filterRuleMap);
         return factoryBean;

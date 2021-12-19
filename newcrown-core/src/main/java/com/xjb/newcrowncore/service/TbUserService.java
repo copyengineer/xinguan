@@ -3,7 +3,7 @@ package com.xjb.newcrowncore.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xjb.newcrowncommon.Response.Response;
 import com.xjb.newcrowncommon.bean.dto.UserLoginDto;
-import com.xjb.newcrowncore.bean.TbUser;
+import com.xjb.newcrowncommon.model.TbUser;
 
 /**
  * <p>

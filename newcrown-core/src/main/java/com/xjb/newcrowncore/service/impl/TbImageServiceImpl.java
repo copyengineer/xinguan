@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbImage;
-import com.xjb.newcrowncore.mapper.TbImageMapper;
-import com.xjb.newcrowncore.service.TbImageService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbImage;
+import com.xjb.newcrowncommon.model.TbImage;
 import com.xjb.newcrowncore.mapper.TbImageMapper;
 import com.xjb.newcrowncore.service.TbImageService;
 import org.springframework.stereotype.Service;

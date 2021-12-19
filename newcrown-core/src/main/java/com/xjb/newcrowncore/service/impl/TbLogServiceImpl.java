@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbLog;
-import com.xjb.newcrowncore.mapper.TbLogMapper;
-import com.xjb.newcrowncore.service.TbLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbLog;
+import com.xjb.newcrowncommon.model.TbLog;
 import com.xjb.newcrowncore.mapper.TbLogMapper;
 import com.xjb.newcrowncore.service.TbLogService;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,10 @@
 package com.xjb.newcrowncore.service;
 
-import com.xjb.newcrowncore.bean.TbMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xjb.newcrowncore.bean.TbMenu;
+import com.xjb.newcrowncommon.model.TbMenu;
+import com.xjb.newcrowncommon.vo.MenuTreeVo;
+
+import java.util.Set;
 
 /**
  * <p>
@@ -14,4 +16,10 @@ import com.xjb.newcrowncore.bean.TbMenu;
  */
 public interface TbMenuService extends IService<TbMenu> {
 
+    /**
+     * 根据用户名查找该用户的菜单
+     * @param userName 用户名
+     * @return 菜单列表
+     */
+    public Set<MenuTreeVo> getMenusByUserName(String userName);
 }

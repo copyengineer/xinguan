@@ -1,7 +1,7 @@
 package com.xjb.newcrowncore.service;
 
-import com.xjb.newcrowncore.bean.BizProduct;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xjb.newcrowncommon.model.BizProduct;
 
 /**
  * <p>

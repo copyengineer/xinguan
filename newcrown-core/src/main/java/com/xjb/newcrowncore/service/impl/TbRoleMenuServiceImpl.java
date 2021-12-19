@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbRoleMenu;
-import com.xjb.newcrowncore.mapper.TbRoleMenuMapper;
-import com.xjb.newcrowncore.service.TbRoleMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbRoleMenu;
+import com.xjb.newcrowncommon.model.TbRoleMenu;
 import com.xjb.newcrowncore.mapper.TbRoleMenuMapper;
 import com.xjb.newcrowncore.service.TbRoleMenuService;
 import org.springframework.stereotype.Service;

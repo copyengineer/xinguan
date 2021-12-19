@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbDepartment;
-import com.xjb.newcrowncore.mapper.TbDepartmentMapper;
-import com.xjb.newcrowncore.service.TbDepartmentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbDepartment;
+import com.xjb.newcrowncommon.model.TbDepartment;
 import com.xjb.newcrowncore.mapper.TbDepartmentMapper;
 import com.xjb.newcrowncore.service.TbDepartmentService;
 import org.springframework.stereotype.Service;

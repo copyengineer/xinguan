@@ -9,6 +9,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 辛集斌
@@ -18,12 +20,12 @@ import java.io.PrintWriter;
 @SuppressWarnings("all")
 public class TokenInterceptor implements HandlerInterceptor {
 
+    public static Map<String,String> USER_MAP = new HashMap<>();
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("进入拦截器"+ response.getStatus() + request.getRequestURI());
-        if (response.getStatus() == 200) {
-            return true;
-        }
+        response.setCharacterEncoding("UTF-8");
         //1.检查请求头中是否含有token
         String token = request.getHeader("Authorization");
         //2.如果客户端没有携带token，拦下请求
@@ -38,6 +40,9 @@ public class TokenInterceptor implements HandlerInterceptor {
         //3.token是否失效
         try {
             DecodedJWT encoding = JwtUtil.encoding(token);
+            //如果token有效则获取token中的userName
+            Map<String, String> userInfoMap = JwtUtil.getUserNameFromTokenStr(token);
+            USER_MAP = userInfoMap;
         }catch (Exception e){
             Response<Object> res = Response.fail(500, "token失效", null);
             PrintWriter writer = response.getWriter();

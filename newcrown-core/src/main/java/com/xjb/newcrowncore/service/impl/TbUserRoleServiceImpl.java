@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.TbUserRole;
-import com.xjb.newcrowncore.mapper.TbUserRoleMapper;
-import com.xjb.newcrowncore.service.TbUserRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.TbUserRole;
+import com.xjb.newcrowncommon.model.TbUserRole;
 import com.xjb.newcrowncore.mapper.TbUserRoleMapper;
 import com.xjb.newcrowncore.service.TbUserRoleService;
 import org.springframework.stereotype.Service;

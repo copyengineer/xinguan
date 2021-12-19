@@ -1,8 +1,7 @@
 package com.xjb.newcrowncore.service;
 
-import com.xjb.newcrowncore.bean.TbLoginLog;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xjb.newcrowncore.bean.TbLoginLog;
+import com.xjb.newcrowncommon.model.TbLoginLog;
 
 /**
  * <p>

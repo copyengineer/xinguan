@@ -1,10 +1,7 @@
 package com.xjb.newcrowncore.service.impl;
 
-import com.xjb.newcrowncore.bean.BizProductStock;
-import com.xjb.newcrowncore.mapper.BizProductStockMapper;
-import com.xjb.newcrowncore.service.BizProductStockService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xjb.newcrowncore.bean.BizProductStock;
+import com.xjb.newcrowncommon.model.BizProductStock;
 import com.xjb.newcrowncore.mapper.BizProductStockMapper;
 import com.xjb.newcrowncore.service.BizProductStockService;
 import org.springframework.stereotype.Service;
